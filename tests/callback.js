@@ -1,3 +1,4 @@
+
 function forEach(items, callback) {
     let meuretorno = new Array();
   for (let index = 0; index < items.length; index++) {
@@ -8,6 +9,11 @@ return meuretorno
 
 module.exports = forEach;
 
+let result = new Array();
+
 minhaCallBack = x => 42 + x;
 
-console.log('Teste de CallBack : ' + forEach([0, 1], minhaCallBack));
+result = forEach([0, 1], minhaCallBack);
+
+console.log('Valores do Array : ' + result );
+console.log('Tamanho do Array : ' + result.length );

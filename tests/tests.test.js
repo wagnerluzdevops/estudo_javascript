@@ -24,3 +24,24 @@ test('object assignment', () => {
     expect(z).not.toBeTruthy();
     expect(z).toBeFalsy();
   });
+
+  test('adding positive numbers is not zero', () => {
+    for (let a = 1; a < 10; a++) {
+      for (let b = 1; b < 10; b++) {
+        expect(a + b).not.toBe(0);
+      }
+    }
+  });
+
+  const shoppingList = [
+    'diapers',
+    'kleenex',
+    'trash bags',
+    'paper towels',
+    'beer',
+  ];
+  
+  test('the shopping list has beer on it', () => {
+    expect(shoppingList).toContain('beer');
+    expect(new Set(shoppingList)).toContain('beer');
+  });
