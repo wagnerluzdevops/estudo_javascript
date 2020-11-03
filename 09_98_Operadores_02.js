@@ -4,7 +4,8 @@ const { map, concatAll } = require('rxjs/operators')
 
 ajax({
     createXHR: () => new XMLHttpRequest(),
-    url: 'https://api.github.com/users/cod3rcursos/repos'
+    url: 'https://api.github.com/users/wagnerluzdevops/repos'
+    // url: 'https://api.github.com/users/cod3rcursos/repos'
 })
 .pipe(
     map(resp => JSON.parse(resp.xhr.responseText)),
