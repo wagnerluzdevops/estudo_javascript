@@ -1,8 +1,6 @@
 // Observable , retornos
 
-
 const { Observable } = require("rxjs");
-
 
 const obs = new Observable(subscriber => {   // recebe um subscriber ... podemos fazer new Observable ou Observable.create 
     subscriber.next('Primeiro next do Observable')  // realiza 01 next ou vários
