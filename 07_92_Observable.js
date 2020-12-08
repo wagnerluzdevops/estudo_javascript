@@ -1,8 +1,9 @@
 // Observable , retornos
 
-const { Observable } = require("rxjs");
+const { Observable, noop } = require("rxjs");
 
-const obs = new Observable(subscriber => {   // recebe um subscriber ... podemos fazer new Observable ou Observable.create 
+const obs$ = new Observable(subscriber => {   // recebe um subscriber ... 
+    // Podemos fazer new Observable ou Observable.create 
     subscriber.next('Primeiro next do Observable')  // realiza 01 next ou vários
     subscriber.next('Segundo next do Observable')
     subscriber.next('Terceiro next do Observable')
@@ -25,7 +26,7 @@ const obs = new Observable(subscriber => {   // recebe um subscriber ... podemos
 
 // Ou podemos chamar passando um objeto 
 
-obs.subscribe({
+obs$.subscribe({
     next(valor) {
         console.log(`Valor: ${valor}`)
     },
@@ -33,6 +34,8 @@ obs.subscribe({
     complete() {
         console.log('Complete')
     },
+    // noop,
+    // noop  SE NÃO QUISER TRATAR O ERRO 
     error(msg) {
         console.log(`Msg: ${msg}`)
     }

@@ -5,7 +5,8 @@
 const { Observable } = require("rxjs");
 
 const promise = new Promise(resolve => {
-    resolve('Resultado do Promise!')
+    resolve('Primeiro Resultado do Promise!')
+    resolve('Segundo Resultado do Promise!')  // NAO VAI APARECER !! A Promise so executa uma vez !
 })
 
 promise.then(console.log);   // Promise so dará um retorno por vez que é chamado !
@@ -17,4 +18,5 @@ const obs = new Observable(subscriber => {   // recebe um subscriber ... podemos
     subscriber.next('Terceiro next do Observable')
 } )
 
-obs.subscribe(console.log)    // No Observable damos um subscribe 
+obs.subscribe(console.log)    
+// No Observable damos um subscribe 
