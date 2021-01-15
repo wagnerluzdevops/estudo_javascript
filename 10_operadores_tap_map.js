@@ -14,4 +14,4 @@ const example = source
 
 //'tap' does not transform values
 //output: 11...12...13...14...15
-const subscribe = example.subscribe(val => console.log(val));
+const subscribe = example.subscribe(val => console.log('Exibe apos o utlimo tap : ' + val));
