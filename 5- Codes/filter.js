@@ -16,16 +16,7 @@ let objeto = [
     ]},
 ]
 
-let players = objeto.map((player) => {
-    let result = player.categories.filter(p => { p.id === 2
-       // console.log(p);
-      
-    })
-    console.log(result);
-   
-    //     return p.id == 2 
-    // console.log(player);
-    })
-    // )
-// })
-console.log(players);
+
+let retorno = objeto.filter(player => player.categories.some(cat => cat.id == 2));
+
+console.log(JSON.stringify(retorno));

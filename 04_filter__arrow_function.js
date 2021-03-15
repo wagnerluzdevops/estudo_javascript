@@ -7,11 +7,11 @@ let filtro = n => n > 15;
 
   // OU
 
-  let novoArray2 = meuArray.filter(filtro);
+  // let novoArray2 = meuArray.filter(filtro);
   
   console.log(novoArray);
 
-  console.log(novoArray2);
+  // console.log(novoArray2);
 
   // RETORNARÁ [ 20, 40, 60, 80 ]
 
